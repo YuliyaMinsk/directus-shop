@@ -19,4 +19,4 @@ const Provider: React.FC<ProviderProps> = ({ children }) => {
   );
 };
 
-export default Provider;
+export { Provider };
