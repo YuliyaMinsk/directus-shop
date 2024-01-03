@@ -1,5 +1,7 @@
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHQL_API || '';
 
+const CACHE_DURATION = 3600;
+
 const fetchData = async (query: string, variables?: {}) => {
   const headers = {
     'Content-Type': 'application/json',
@@ -9,6 +11,7 @@ const fetchData = async (query: string, variables?: {}) => {
     method: 'POST',
     headers,
     body: JSON.stringify({ query, variables }),
+    next: { revalidate: CACHE_DURATION },
   });
 
   const data = await response.json();

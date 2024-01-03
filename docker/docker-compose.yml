@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   directus:
     image: directus/directus:10.8.2
@@ -9,10 +9,10 @@ services:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     environment:
-      KEY: "mySuperSecretKeyKey12345"
-      SECRET: "mySuperSecretSecretKey12345"
-      ADMIN_EMAIL: "admin@example.com"
-      ADMIN_PASSWORD: "111111"
-      DB_CLIENT: "sqlite3"
-      DB_FILENAME: "/directus/database/data.db"
+      KEY: 'mySuperSecretKeyKey12345'
+      SECRET: 'mySuperSecretSecretKey12345'
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: '111111'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: './database/data.db'
       WEBSOCKETS_ENABLED: true
