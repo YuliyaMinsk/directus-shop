@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Directus Shop
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Directus Shop is a simple application designed to showcase the integration of modern web technologies including Next.js 14 with TypeScript, Tailwind CSS, and TanStack Query. It serves as a testing ground for these tools in a practical e-commerce context.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 14**: A powerful React framework for server-side rendering.
+- **TypeScript**: Enhanced JavaScript with type safety.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **TanStack Query**: A set of tools for efficient data synchronization.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
+   `git clone https://github.com/YuliyaMinsk/directus-shop.git`
 
-## Learn More
+2. Install dependencies:
+   `npm install`
 
-To learn more about Next.js, take a look at the following resources:
+3. Install Docker on your machine
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Run `docker-compose.yml` with specified configurations including Directus image, ports, volumes, and environment settings. This configuration includes setting up an admin email and password, database client, and other necessary environment variables using the command
+   `docker compose up`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. Access Directus at `http://localhost:8055` or `http://127.0.0.1:8055`
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+6. Run the frontend part of app:
+   `npm run dev`
